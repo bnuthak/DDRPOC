@@ -1,0 +1,291 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="DDRPOC.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+<%--<link id="Link1"  href="~/Styles/Site.css" runat="server" rel="stylesheet" type="text/css" media="screen"/>--%>
+    <title></title>
+       <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css" >
+        .style1
+        {
+            width: 65px;
+        }
+		 #line
+        {
+        border-bottom: 1px black solid;
+        overflow:visible;
+        height:9px;        
+        margin: 5px 0 10px 0;
+        width:80%;
+        }
+        body   
+        {
+            background: #b6b7bc;
+            font-size: .80em;
+            font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+            margin: 0px;
+            padding: 0px;
+            color: #696969;
+        }
+        .page
+        {
+        width: 1285px;
+        background-color: #fff;
+        margin: 15px auto 15px auto;
+        border: 1px solid #496077;
+		height: 685px;
+        }
+        .header
+        {
+            position: relative;
+            margin: 0px;
+            padding: 0px;
+            background:#63CAF0;
+            width: 100%;
+        }
+        .loginDisplay
+        {
+            font-size: 1.1em;
+            display: block;
+            text-align: right;
+            padding: 10px;
+            color: black;
+            background-color:#63caf0;
+        }
+       div.hideSkiplink
+        {
+            background-color:#3a4f63;
+            width:100%;
+			height:45px;
+        }
+        .main
+        {
+			padding: 0px 12px;
+            margin: 8px 8px 8px 8px;
+            min-height:555px;
+            width: 1250px;
+            height:540px;
+        }
+        .footer
+        {
+            color: #EEE;
+            padding: 0px 0px 0px 0px;
+            margin: 0px auto;
+            margin-top: 10px;
+            height: 40px;
+            text-align: center;
+            line-height: normal ;
+            background-color: #007fff;
+            background: #000000; 
+        }
+        /* TAB MENU   
+        ----------------------------------------------------------*/
+        div.menu
+        {
+            padding: 4px 0px 4px 6px;
+        }
+        div.menu ul
+        {
+             list-style: none;
+            margin: 0px;
+            padding: 0px;
+            width: auto;
+			height:40px;
+        }
+        div.menu ul li a, div.menu ul li a:visited
+        {
+            background-color: #465c71;
+            border: 1px #4e667d solid;
+            color: #dde4ec;
+            display: block;
+            line-height: 1.35em;
+            padding: 5px 20px;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        div.menu ul li a:hover
+        {
+            background-color: #bfcbd6;
+            color: #465c71;
+            text-decoration: none;
+        }
+        div.menu ul li a:active
+        {
+            background-color: #465c71;
+            color: #cfdbe6;
+            text-decoration: none;
+        }
+        .title
+        {
+            display: block;
+            float: left;
+            text-align: left;
+            width: auto;
+           /* color:Black */
+        }
+        .loginDisplay
+        {
+            font-size: 1.1em;
+            display: block;
+            text-align: right;
+            padding: 10px;
+            color: black;
+            background-color:#63caf0;
+        }
+        .loginDisplay a:link
+        {
+            color: white;
+        }
+        .loginDisplay a:visited
+        {
+            color: white;
+        }
+        .loginDisplay a:hover
+        {
+            color: white;
+        }
+        /* HEADINGS   
+----------------------------------------------------------*/
+        h1, h2, h3, h4, h5, h6
+        {
+            font-size: 1.6em;
+            color: #666666;
+            text-transform: none;
+            margin-bottom: 0px;
+        }
+        h3
+        {
+            font-size: 1.2em;
+        }
+        h4
+        {
+            font-size: 1.1em;
+        }
+        h5, h6
+        {
+            font-size: 1em;
+        }
+
+        /* this rule styles <h1> and <h2> tags that are the 
+        first child of the left and right table columns */
+        .rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+        {
+            margin-top: 0px;
+        }
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+    </style>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <table>
+             <tr><td width="75%" >
+            <div class="title" >
+                <h1>
+                    Development Data Discovery
+                </h1>
+            </div>
+           <asp:ScriptManager ID="mainScriptManager" runat="server">
+            </asp:ScriptManager>
+            </td>
+            
+            <td width="15%">
+            <div class="loginDisplay" >
+                <table>
+                <tr><td align="left"><asp:Label ID="Label1" runat="server" Text="Label" style="text-align: left;">Current User </asp:Label></td>
+                <td>:</td>
+                 <td align="left" class="style1"><asp:Label ID="lbluserid" runat="server" Text="Label" ViewStateMode="Enabled" > Not Set </asp:Label></td></tr>
+
+                <tr><td align="left"><asp:Label ID="Label3" runat="server" Text="Label" style="text-align: left;" >Country Code </asp:Label></td>
+                <td>:</td>
+                 <td align="left" class="style1" ><asp:Label ID="lblsitecode" runat="server" Text="Label" ViewStateMode="Enabled">Not Set</asp:Label></td></tr>
+
+                </table>
+            </div>
+            </td></tr>
+            </table>
+            
+            <%--<div class="clear hideSkiplink">--%>
+              <div class="hideSkiplink">                 
+                <table width="100%" ><tr ><td height="40px">
+                <asp:UpdatePanel ID="updpnlmmautiding" runat="server">
+            <ContentTemplate>
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem Text="MM">
+                            <asp:MenuItem Text="Auditing" Value="Auditing" NavigateUrl="~/MMAuditing.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Verification - Global Data" Value="Verification - Global Data" NavigateUrl="~/MMVerificationGlobalData.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Verification - Plant Data" Value="Verification - Plant Data" NavigateUrl="~/MMVerificationPlantData.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Verification - Sales Data" Value="Verification - Sales Data" NavigateUrl="~/MMVerificationSalesData.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Verification - Warehouse Data" Value="Verification - Warehouse Data" NavigateUrl="~/MMVerificationWarehouseData.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                            <asp:MenuItem Text="BOM" Value="BOM">
+                            <asp:MenuItem Text="Auditing" Value="Auditing" NavigateUrl="~/BOMAuditing.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Verification" Value="Verification" NavigateUrl="~/BOMVerification.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="RESOURCES" Value="RESOURCES">
+                            <asp:MenuItem Text="Auditing" Value="Auditing" NavigateUrl="~/ResourcesAuditing.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Verification" Value="Verification" NavigateUrl="~/ResourcesVerification.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="RECIPES" Value="RECIPES">
+                            <asp:MenuItem Text="Auditing" Value="Auditing" NavigateUrl="~/RecipesAuditing.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Verification" Value="Verification" NavigateUrl="~/RecipesVerification.aspx"></asp:MenuItem>                            
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="QM">
+                             <asp:MenuItem Text="Audit" Value="Audit" NavigateUrl="~/QMAuditing.aspx"></asp:MenuItem>                            
+                            <asp:MenuItem Text="Verification" Value="Verification" NavigateUrl="~/QMVerification.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="APO" Value="APO">
+                            <asp:MenuItem Text="Auditing" Value="Auditing" NavigateUrl="~/APOAuditing.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Verification" Value="Verification" NavigateUrl="~/APOVerification.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="INVENTORY" Value="INVENTORY">
+                            <asp:MenuItem Text="Auditing" Value="Auditing" NavigateUrl="~/InventoryAuditing.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Verification" Value="Verification" NavigateUrl="~/Unused.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="CONSISTENCY CHECKS" Value="CONSISTENCY CHECKS">
+                            <%--<asp:MenuItem Text="MM Consistency" Value="MMConsistency" NavigateUrl="~/ConsistencyChecksMMConsistency.aspx"></asp:MenuItem>--%>
+                            <asp:MenuItem Text="MM Clashes" Value="MMClashes" NavigateUrl="~/ConsistencyChecksMMClashes.aspx"></asp:MenuItem>
+                            <%--<asp:MenuItem Text="BOM Consistency" Value="BOM" NavigateUrl="~/ConsistencyChecksBOMConsistency.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Resource Consistency" Value="Resource" NavigateUrl="~/ConsistencyChecksResourceConsistency.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Recipe Consistency" Value="Recipe" NavigateUrl="~/ConsistencyChecksRecipeConsistency.aspx"></asp:MenuItem>--%>
+                            <asp:MenuItem Text="MM Consistency" Value="MMConsistency" NavigateUrl="~/Unused.aspx"></asp:MenuItem>                            
+                            <asp:MenuItem Text="BOM Consistency" Value="BOM" NavigateUrl="~/Unused.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Resource Consistency" Value="Resource" NavigateUrl="~/Unused.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Recipe Consistency" Value="Recipe" NavigateUrl="~/Unused.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="OTHER" Value="Other">
+                            <asp:MenuItem Text="Admin Reports" Value="Admin Reports" NavigateUrl="~/OtherAdmin.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+                </ContentTemplate>
+             </asp:UpdatePanel>
+                </td>
+                <td align="right" style="height: 50px; vertical-align:top">>
+            <asp:HyperLink ID="lnklogout" runat="server" NavigateUrl="~/Home.aspx" ForeColor="White">LogOut</asp:HyperLink></td>
+                </tr></table>
+            </div>
+        </div>
+
+        <%--<div class="content" height=450px>--%>
+        <asp:Panel ID="MainContentPanel" runat="server"  ScrollBars="auto" CssClass="main"> 
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+             
+            </asp:ContentPlaceHolder>
+            </asp:Panel>
+    </div>
+    <div class="footer">
+                <br />
+                Copyright @ 2016
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="http://lillynethome.rf.lilly.com/Pages/default.aspx"
+            Target="_blank" ForeColor="Orange" Style="text-decoration: none; vertical-align:middle"> Eli-Lilly </asp:HyperLink>
+                All Rights Reserved.   
+            </div>
+    </form>
+</body>
+</html>

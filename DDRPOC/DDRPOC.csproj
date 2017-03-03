@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4454BF48-B1E9-42A2-A916-420460941A82}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DDRPOC</RootNamespace>
+    <AssemblyName>DDRPOC</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <DeployIisAppPath>Default Web Site/DDRPOC</DeployIisAppPath>
+    <PublishDatabaseSettings>&lt;Objects&gt;&lt;ObjectGroup Name="DDRConnectionString" Order="1" Enabled="False"&gt;&lt;Destination Path="" /&gt;&lt;/ObjectGroup&gt;&lt;ObjectGroup Name="ApplicationServices-Deployment" Order="2" Enabled="False"&gt;&lt;Destination Path="" /&gt;&lt;Object Type="dbFullSql"&gt;&lt;PreSource Path="Data Source=.\SQLEXPRESS%3bAttachDbFilename=|DataDirectory|\aspnetdb.mdf%3bIntegrated Security=True%3bUser Instance=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" /&gt;&lt;Source Path="obj\Debug\AutoScripts\ApplicationServices-Deployment_SchemaOnly.sql" Transacted="True" /&gt;&lt;/Object&gt;&lt;/ObjectGroup&gt;&lt;ObjectGroup Name="DdrConnectionString1-Deployment" Order="3" Enabled="False"&gt;&lt;Destination Path="" /&gt;&lt;Object Type="dbFullSql"&gt;&lt;PreSource Path="USER ID=c219641%3bPASSWORD=test123%3bDATA SOURCE=dev_49" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" /&gt;&lt;Source Path="obj\Debug\AutoScripts\DdrConnectionString1-Deployment_SchemaOnly.sql" Transacted="True" /&gt;&lt;/Object&gt;&lt;/ObjectGroup&gt;&lt;ObjectGroup Name="ConnectionString-Deployment" Order="4" Enabled="False"&gt;&lt;Destination Path="" /&gt;&lt;Object Type="dbFullSql"&gt;&lt;PreSource Path="USER ID=c219641%3bPASSWORD=test123%3bDATA SOURCE=&amp;quot%3b%28&amp;#xD%3b&amp;#xA%3b         %28DESCRIPTION = %28ADDRESS_LIST = %28ADDRESS = %28HOST = credit.d51.lilly.com%29 %28PROTOCOL = TCP%29 %28PORT = 1525%29%29%29 &amp;#xD%3b&amp;#xA%3b        %28CONNECT_DATA = %28SID = dev_49%29%29%29&amp;quot%3b" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" /&gt;&lt;Source Path="obj\Debug\AutoScripts\ConnectionString-Deployment_SchemaOnly.sql" Transacted="True" /&gt;&lt;/Object&gt;&lt;/ObjectGroup&gt;&lt;ObjectGroup Name="DDRConnectionString-Deployment" Order="5"&gt;&lt;Destination Path="" /&gt;&lt;Object Type="dbFullSql"&gt;&lt;PreSource Path="USER ID=c219641%3bPASSWORD=test123%3bDATA SOURCE=&amp;quot%3b%28DESCRIPTION=%28ADDRESS_LIST=%28ADDRESS=%28PROTOCOL=TCP%29%28HOST=credit.d51.lilly.com%29%28PORT=1525%29%29%29%28CONNECT_DATA=%28SERVER=DEDICATED%29%28SERVICE_NAME=dev_49%29%29%29&amp;quot%3b" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" /&gt;&lt;Source Path="obj\Debug\AutoScripts\DDRConnectionString-Deployment_SchemaOnly.sql" Transacted="True" /&gt;&lt;/Object&gt;&lt;/ObjectGroup&gt;&lt;/Objects&gt;</PublishDatabaseSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PublishDatabaseSettings>
+      <Objects>
+      </Objects>
+    </PublishDatabaseSettings>
+    <DeployIisAppPath>Default Web Site/DDRPOC</DeployIisAppPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Unused.aspx" />
+    <Content Include="DBSchema.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Error.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Home.aspx" />
+    <Content Include="Image\UnderConstruction.JPG" />
+    <Content Include="Image\internal.gif" />
+    <Content Include="Image\LillySign.gif" />
+    <Content Include="Image\QM1.JPG" />
+    <Content Include="Image\QMVery.JPG" />
+    <Content Include="InventoryVerification.aspx" />
+    <Content Include="InventoryAuditing.aspx" />
+    <Content Include="ConsistencyChecksMMClashes.aspx" />
+    <Content Include="OtherAdmin.aspx" />
+    <Content Include="MMVerificationWarehouseData.aspx" />
+    <Content Include="MMVerificationGlobalData.aspx" />
+    <Content Include="MMAuditing.aspx" />
+    <Content Include="APOAuditing.aspx" />
+    <Content Include="QMAuditing.aspx" />
+    <Content Include="MMVerificationSalesData.aspx" />
+    <Content Include="MMVerificationPlantData.aspx" />
+    <Content Include="BOMVerification.aspx" />
+    <Content Include="BOMAuditing.aspx" />
+    <Content Include="APOVerification.aspx" />
+    <Content Include="ConsistencyChecksBOMConsistency.aspx" />
+    <Content Include="ConsistencyChecksResourceConsistency.aspx" />
+    <Content Include="ConsistencyChecksRecipeConsistency.aspx" />
+    <Content Include="ConsistencyChecksMMConsistency.aspx" />
+    <Content Include="RecipesAuditing.aspx" />
+    <Content Include="RecipesVerification.aspx" />
+    <Content Include="ResourcesVerification.aspx" />
+    <Content Include="ResourcesAuditing.aspx" />
+    <Content Include="Temp\Blank.txt" />
+    <Content Include="Blocked.aspx" />
+    <Content Include="UnderConstructionSite.aspx" />
+    <Content Include="QMVerification.aspx" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Report_Output.aspx" />
+    <Content Include="WebReport\QM\QM_qinfo_sap.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Unused.aspx.cs">
+      <DependentUpon>Unused.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Unused.aspx.designer.cs">
+      <DependentUpon>Unused.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DBSchema.aspx.cs">
+      <DependentUpon>DBSchema.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DBSchema.aspx.designer.cs">
+      <DependentUpon>DBSchema.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryVerification.aspx.cs">
+      <DependentUpon>InventoryVerification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InventoryVerification.aspx.designer.cs">
+      <DependentUpon>InventoryVerification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryAuditing.aspx.cs">
+      <DependentUpon>InventoryAuditing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InventoryAuditing.aspx.designer.cs">
+      <DependentUpon>InventoryAuditing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsistencyChecksMMClashes.aspx.cs">
+      <DependentUpon>ConsistencyChecksMMClashes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsistencyChecksMMClashes.aspx.designer.cs">
+      <DependentUpon>ConsistencyChecksMMClashes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OtherAdmin.aspx.cs">
+      <DependentUpon>OtherAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OtherAdmin.aspx.designer.cs">
+      <DependentUpon>OtherAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MMVerificationWarehouseData.aspx.cs">
+      <DependentUpon>MMVerificationWarehouseData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MMVerificationWarehouseData.aspx.designer.cs">
+      <DependentUpon>MMVerificationWarehouseData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MMVerificationGlobalData.aspx.cs">
+      <DependentUpon>MMVerificationGlobalData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MMVerificationGlobalData.aspx.designer.cs">
+      <DependentUpon>MMVerificationGlobalData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MMAuditing.aspx.cs">
+      <DependentUpon>MMAuditing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MMAuditing.aspx.designer.cs">
+      <DependentUpon>MMAuditing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="APOAuditing.aspx.cs">
+      <DependentUpon>APOAuditing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="APOAuditing.aspx.designer.cs">
+      <DependentUpon>APOAuditing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QMAuditing.aspx.cs">
+      <DependentUpon>QMAuditing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QMAuditing.aspx.designer.cs">
+      <DependentUpon>QMAuditing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MMVerificationSalesData.aspx.cs">
+      <DependentUpon>MMVerificationSalesData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MMVerificationSalesData.aspx.designer.cs">
+      <DependentUpon>MMVerificationSalesData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MMVerificationPlantData.aspx.cs">
+      <DependentUpon>MMVerificationPlantData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MMVerificationPlantData.aspx.designer.cs">
+      <DependentUpon>MMVerificationPlantData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BOMVerification.aspx.cs">
+      <DependentUpon>BOMVerification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BOMVerification.aspx.designer.cs">
+      <DependentUpon>BOMVerification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BOMAuditing.aspx.cs">
+      <DependentUpon>BOMAuditing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BOMAuditing.aspx.designer.cs">
+      <DependentUpon>BOMAuditing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="APOVerification.aspx.cs">
+      <DependentUpon>APOVerification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="APOVerification.aspx.designer.cs">
+      <DependentUpon>APOVerification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsistencyChecksBOMConsistency.aspx.cs">
+      <DependentUpon>ConsistencyChecksBOMConsistency.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsistencyChecksBOMConsistency.aspx.designer.cs">
+      <DependentUpon>ConsistencyChecksBOMConsistency.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsistencyChecksResourceConsistency.aspx.cs">
+      <DependentUpon>ConsistencyChecksResourceConsistency.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsistencyChecksResourceConsistency.aspx.designer.cs">
+      <DependentUpon>ConsistencyChecksResourceConsistency.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsistencyChecksRecipeConsistency.aspx.cs">
+      <DependentUpon>ConsistencyChecksRecipeConsistency.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsistencyChecksRecipeConsistency.aspx.designer.cs">
+      <DependentUpon>ConsistencyChecksRecipeConsistency.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsistencyChecksMMConsistency.aspx.cs">
+      <DependentUpon>ConsistencyChecksMMConsistency.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsistencyChecksMMConsistency.aspx.designer.cs">
+      <DependentUpon>ConsistencyChecksMMConsistency.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecipesAuditing.aspx.cs">
+      <DependentUpon>RecipesAuditing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecipesAuditing.aspx.designer.cs">
+      <DependentUpon>RecipesAuditing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecipesVerification.aspx.cs">
+      <DependentUpon>RecipesVerification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecipesVerification.aspx.designer.cs">
+      <DependentUpon>RecipesVerification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResourcesVerification.aspx.cs">
+      <DependentUpon>ResourcesVerification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResourcesVerification.aspx.designer.cs">
+      <DependentUpon>ResourcesVerification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResourcesAuditing.aspx.cs">
+      <DependentUpon>ResourcesAuditing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResourcesAuditing.aspx.designer.cs">
+      <DependentUpon>ResourcesAuditing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blocked.aspx.cs">
+      <DependentUpon>Blocked.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blocked.aspx.designer.cs">
+      <DependentUpon>Blocked.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UnderConstructionSite.aspx.cs">
+      <DependentUpon>UnderConstructionSite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UnderConstructionSite.aspx.designer.cs">
+      <DependentUpon>UnderConstructionSite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QMVerification.aspx.cs">
+      <DependentUpon>QMVerification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QMVerification.aspx.designer.cs">
+      <DependentUpon>QMVerification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Output.aspx.cs">
+      <DependentUpon>Report_Output.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report_Output.aspx.designer.cs">
+      <DependentUpon>Report_Output.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebReport\QM\QM_qinfo_sap.aspx.cs">
+      <DependentUpon>QM_qinfo_sap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebReport\QM\QM_qinfo_sap.aspx.designer.cs">
+      <DependentUpon>QM_qinfo_sap.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="WebReport\APO\" />
+    <Folder Include="WebReport\BOM\" />
+    <Folder Include="WebReport\Consistency\" />
+    <Folder Include="WebReport\Inventory\" />
+    <Folder Include="WebReport\MM\" />
+    <Folder Include="WebReport\Other\" />
+    <Folder Include="WebReport\Recipes\" />
+    <Folder Include="WebReport\Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DDR.BusinessLogic\DDR.BusinessLogic.csproj">
+      <Project>{1F8BA859-55E5-4241-943F-32D12C2330E3}</Project>
+      <Name>DDR.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DDR.Entity\DDR.Entity.csproj">
+      <Project>{654ae1d9-3ba6-4846-b9a2-5fbd2b3c4462}</Project>
+      <Name>DDR.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\Profile1.pubxml" />
+    <None Include="Properties\PublishProfiles\Profile2.pubxml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50747</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50747/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <servers defaultServer="SelfHostServer">
+            <server name="SelfHostServer" exePath="" cmdArgs="" url="http://localhost:50747/" workingDir="" />
+          </servers>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
